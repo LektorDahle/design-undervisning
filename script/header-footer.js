@@ -8,18 +8,16 @@
     hamburgerWrapper.onclick = () => {
         const aside = document.querySelector("aside");
         if (aside) {
-            
+
             aside.style.display = aside.style.display === "none" ? "block" : "none";
 
         }
-        const n = document.getElementById("header-nav");
-        if (n) {
-            n.style.display = n.style.display === "none" ? "flex" : "none";
-        }
+        header.style.display = header.style.display === "none" ? "flex" : "none";
     };
     const img = document.createElement("img");
     img.src = "./img/ico/hamburger.svg";
     hamburgerWrapper.append(img);
+    body.append(hamburgerWrapper);
 
     const headerLinks =
         [
@@ -43,7 +41,7 @@
             a.onclick = i.button;
         }
     });
-    header.append(hamburgerWrapper, nav)
+    header.append(nav);
 })();
 
 (() => {

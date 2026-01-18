@@ -5,7 +5,7 @@
 }
 
 html {
-    min-height: 100dvg;
+    min-height: 100dvh;
     height: 100%;
     width: 100dvw;
 }
@@ -29,10 +29,16 @@ button {
 
 h1 {
     font-size: calc(1.41*1.41*1.41rem);
+    margin-top: .5em;
 }
 
 h2 {
     font-size: calc(1.41*1.41rem);
+    margin-top: .5em;
+}
+
+h3 {
+    margin-top: .5em;
 }
 
 h3,
@@ -42,8 +48,9 @@ button {
 
 p {
     font-family: var(--font-family);
-    font-weight: var(--font-weight-h);
+    font-weight: var(--font-weight-p);
     font-style: var(--font-style);
+    line-height: 2em;
 }
 
 body {
@@ -68,19 +75,33 @@ header {
     position: relative;
     padding: 2em;
     align-items: top;
+    position: sticky;
+    top: 0;
+    background: white;
 }
 
-#main-startside {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    line-height: 3em;
 }
 
-header img {
-    height: 100%;
-    max-height: 2em;
+#main-text-content {
+    max-width: 50em;
+
+    img {
+        margin: 2em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em;
+        border: 0.25px solid black;
+    }
+}
+
+#main-startside {
+    line-height: 3em;
 }
 
 header nav {
@@ -89,6 +110,7 @@ header nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1em;
+    padding: 0 3em;
 
     &>* {
         min-width: 10em;
@@ -110,7 +132,10 @@ button:hover {
 aside {
     grid-area: aside;
     border-right: 1.25px solid black;
+    position: fixed;
+    top: 20em;
 }
+
 
 main {
     grid-area: main;
@@ -173,6 +198,12 @@ footer::before {
             transparent 100%);
 }
 
+
+.hamburger-wrapper img {
+    height: 100%;
+    max-height: 2em;
+}
+
 .hamburger-wrapper {
     background: none;
     border: none;
@@ -182,8 +213,10 @@ footer::before {
     outline: none;
     width: auto;
     height: auto;
-    display: contents;
     cursor: pointer;
+    position: fixed;
+    top: 2em;
+    left: 2em;
 }
 
 aside>nav {
@@ -201,7 +234,7 @@ aside>nav>button {
 }
 
 #prev {
-    position: absolute;
+    position: fixed;
     left: 0;
     transform: translateY(-50%);
     top: 50%;
@@ -210,7 +243,7 @@ aside>nav>button {
 }
 
 #next {
-    position: absolute;
+    position: fixed;
     right: 0;
     transform: translateY(-50%);
     top: 50%;

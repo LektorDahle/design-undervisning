@@ -1,6 +1,6 @@
 function designAside() {
     const designTopics = [
-        { "name": "Prosesser", "button": prosesserButton },
+        { "name": "Prosess", "button": prosesserButton },
         { "name": "Designbrief" },
         { "name": "Personas" },
         { "name": "Kanaltilpassning" }

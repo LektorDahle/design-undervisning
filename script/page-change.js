@@ -89,5 +89,5 @@ function prosesserButton() {
     prev.onclick = designButton;
     next.onclick = prosesserButton;
     drawProsesser();
-    asideButtonBackgroundChange("Prosesser");
+    asideButtonBackgroundChange("Prosess");
 }
