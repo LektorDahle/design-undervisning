@@ -10,6 +10,42 @@ html {
     width: 100dvw;
 }
 
+:root {
+    font-size: clamp (14pt, 1.5vw, 18pt);
+    --font-family: "Radley", serif;
+    --font-weight-p: 400;
+    --font-weight-h: 700;
+    --font-style: normal;
+}
+
+h1,
+h2,
+h3,
+button {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-h);
+    font-style: var(--font-style);
+}
+
+h1 {
+    font-size: calc(1.41*1.41*1.41rem);
+}
+
+h2 {
+    font-size: calc(1.41*1.41rem);
+}
+
+h3,
+button {
+    font-size: calc(1.41rem);
+}
+
+p {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-h);
+    font-style: var(--font-style);
+}
+
 body {
     height: 100%;
     width: 100%;
@@ -30,12 +66,12 @@ header {
     gap: 1em;
     position: relative;
     padding: 2em;
-    align-items: center;
+    align-items: top;
 }
 
 header img {
     height: 100%;
-    max-height: 5em;
+    max-height: 2em;
 }
 
 header nav {

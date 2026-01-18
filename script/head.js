@@ -18,4 +18,19 @@
     base_css.rel = "stylesheet";
     base_css.href = "./base.css";
     head.append(base_css);
+
+    const link1 = document.createElement("link");
+    link1.rel = "preconnect";
+    link1.href = "https://fonts.googleapis.com";
+
+    const link2 = document.createElement("link");
+    link2.rel = "preconnect";
+    link2.href = "https://fonts.gstatic.com"
+    link2.crossOrigin = "anonymous";
+
+    const link3 = document.createElement("link");
+    link3.href = "https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap";
+    link3.rel = "stylesheet";
+    
+    head.appendChild(link1, link2, link3)
 })()

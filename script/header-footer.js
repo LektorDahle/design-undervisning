@@ -10,6 +10,10 @@
         if (aside) {
             aside.style.display = aside.style.display === "none" ? "block" : "none";
         }
+        const n = document.getElementById("header-nav");
+        if (n){
+            n.style.display = n.style.display === "none" ? "flex" : "none";
+        }
     };
     const img = document.createElement("img");
     img.src = "./img/ico/hamburger.svg";
@@ -17,22 +21,26 @@
 
     const headerLinks =
         [
-            { "path": "design", "name": "Design" },
-            { "path": "kommunikasjon", "name": "Kommunikasjon" },
-            { "path": "farger", "name": "Farger" },
-            { "path": "grid", "name": "Grid" },
-            { "path": "typografi", "name": "Typografi" },
-            { "path": "filformat", "name": "Filformat" },
-            { "path": "dokumentasjon", "name": "Dokumentasjon" },
-            { "path": "uu", "name": "UU-prinsipper" }
+            { "path": "design", "name": "Design", "button": designButton },
+            { "path": "kommunikasjon", "name": "Kommunikasjon", button: kommunikasjonButton },
+            { "path": "farger", "name": "Farger", "button": fargeButton },
+            { "path": "grid", "name": "Grid", "button": gridButton },
+            { "path": "typografi", "name": "Typografi", "button": typeButton },
+            { "path": "filformat", "name": "Filformat", "button": fileButton },
+            { "path": "dokumentasjon", "name": "Dokumentasjon", "button": docsButton },
+            { "path": "uu", "name": "UU-prinsipper", "button": uuButton }
         ]
 
     const nav = document.createElement("nav");
+    nav.id = "header-nav";
     headerLinks.forEach(i => {
         const a = document.createElement("button");
         a.href = `./{i.path}`;
         a.innerText = i.name;
         nav.append(a);
+        if (i.button) {
+            a.onclick = i.button;
+        }
     });
     header.append(hamburgerWrapper, nav)
 })();
