@@ -8,7 +8,9 @@
     hamburgerWrapper.onclick = () => {
         const aside = document.querySelector("aside");
         if (aside) {
+            
             aside.style.display = aside.style.display === "none" ? "block" : "none";
+
         }
         const n = document.getElementById("header-nav");
         if (n) {

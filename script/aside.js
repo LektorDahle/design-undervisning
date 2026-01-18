@@ -1,6 +1,6 @@
 function designAside() {
     const designTopics = [
-        { "name": "Prosesser" },
+        { "name": "Prosesser", "button": prosesserButton },
         { "name": "Designbrief" },
         { "name": "Personas" },
         { "name": "Kanaltilpassning" }
@@ -95,5 +95,8 @@ function aside(tops) {
         const button = document.createElement("button")
         button.innerText = topic.name;
         nav.appendChild(button);
+        if (topic.button) {
+            button.onclick = topic.button;
+        }
     });
 }

@@ -47,6 +47,7 @@ p {
 }
 
 body {
+    position: relative;
     height: 100%;
     width: 100%;
     display: grid;
@@ -96,14 +97,19 @@ header nav {
         border-radius: .5em;
         background: none;
     }
+}
 
-    &>*:hover {
-        background: rgba(0, 0, 255, 0.13);
-    }
+#active-button {
+    background: #afafe8ff;
+}
+
+button:hover {
+    background: rgba(0, 0, 255, 0.13);
 }
 
 aside {
     grid-area: aside;
+    border-right: 1.25px solid black;
 }
 
 main {
@@ -183,4 +189,40 @@ footer::before {
 aside>nav {
     display: flex;
     flex-direction: column;
+    min-width: 20em;
+    gap: 1em;
+    padding: 1em 1em 1em 3em;
+}
+
+aside>nav>button {
+    background: none;
+    border: 1.25px solid rgba(0, 0, 0, 0.123);
+    height: 3em;
+}
+
+#prev {
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 2em;
+    height: 15em;
+}
+
+#next {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 2em;
+    height: 15em;
+}
+
+.deactive-button {
+    display: none;
+}
+
+body>button {
+    background: none;
+    border: none;
 }
