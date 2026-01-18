@@ -11,7 +11,7 @@
             aside.style.display = aside.style.display === "none" ? "block" : "none";
         }
         const n = document.getElementById("header-nav");
-        if (n){
+        if (n) {
             n.style.display = n.style.display === "none" ? "flex" : "none";
         }
     };
@@ -21,21 +21,20 @@
 
     const headerLinks =
         [
-            { "path": "design", "name": "Design", "button": designButton },
-            { "path": "kommunikasjon", "name": "Kommunikasjon", button: kommunikasjonButton },
-            { "path": "farger", "name": "Farger", "button": fargeButton },
-            { "path": "grid", "name": "Grid", "button": gridButton },
-            { "path": "typografi", "name": "Typografi", "button": typeButton },
-            { "path": "filformat", "name": "Filformat", "button": fileButton },
-            { "path": "dokumentasjon", "name": "Dokumentasjon", "button": docsButton },
-            { "path": "uu", "name": "UU-prinsipper", "button": uuButton }
+            { "name": "Design", "button": designButton },
+            { "name": "Kommunikasjon", button: kommunikasjonButton },
+            { "name": "Farger", "button": fargeButton },
+            { "name": "Grid", "button": gridButton },
+            { "name": "Typografi", "button": typeButton },
+            { "name": "Filformat", "button": fileButton },
+            { "name": "Dokumentasjon", "button": docsButton },
+            { "name": "UU-prinsipper", "button": uuButton }
         ]
 
     const nav = document.createElement("nav");
     nav.id = "header-nav";
     headerLinks.forEach(i => {
         const a = document.createElement("button");
-        a.href = `./{i.path}`;
         a.innerText = i.name;
         nav.append(a);
         if (i.button) {
