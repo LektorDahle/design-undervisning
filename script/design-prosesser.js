@@ -35,8 +35,8 @@ function drawProsesser() {
     <h3>5. Kontroll </h3>
     <p>Klient godkjenner designet eller kommer med tilbakemelding. Det er godt mulig at klienten ønsker at du starter helt på nytt. 
     Dette er vanlig.</p>
-    <h3>6. Kanaltilpassing og publisering </h3>
-    <p>Dersom klienten er fornøyd, gjøres de siste tilpassningene og så publiseres designet. Dersom noe skal animeres, er
+    <h3>6. Kanaltilpasning og publisering </h3>
+    <p>Dersom klienten er fornøyd, gjøres de siste tilpasningene og så publiseres designet. Dersom noe skal animeres, er
     det normalt at det fullføres i dette steget. Video er det "dyreste" formatet med tanke på arbeidstid.</p>
     `;
 }

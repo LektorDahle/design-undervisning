@@ -14,7 +14,7 @@ function drawChanel() {
     <h2>Print</h2>
     <img src="./img/design/print-begrep.svg" alt="Oversikt over print-begrep.">
     <p>Vi bruker bleed når vi ønsker at printen skal være uten kanter. Bleed er et område på 
-    noen få millimeter som med bildesom vi planlegger å kutte vekk.</p>
+    noen få millimeter som med bilde som vi planlegger å kutte vekk.</p>
     <p>Safety-området er der innhold som er viktig må være plassert. 
     Innhold som er plassert utenfor dette kan bli kuttet vekk i trim - prosessen der man 
     kutter vekk sidene av printen.</p>
