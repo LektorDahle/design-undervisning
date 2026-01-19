@@ -14,7 +14,7 @@ function drawBrief() {
     <p>Ustrukturert lagring og manglende kontroll på filer
     skaper tap av tid og tap av arbeid for elevene på skolen.</p>
     <h2>Ønsket resultat</h2>
-    <p>Ryddig filstruktur</p>
+    <p>Ryddig filstruktur.</p>
     <h2>Strategi</h2>
     <p>Resultatet av dette arbeidet skal støtte arbeidsvaner
     som gir effektivitet, kvalitet og relevans i de fagene
