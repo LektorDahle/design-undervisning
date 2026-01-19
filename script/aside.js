@@ -1,16 +1,16 @@
 function designAside() {
     const designTopics = [
         { "name": "Prosess", "button": prosesserButton },
-        { "name": "Designbrief" },
-        { "name": "Personas" },
-        { "name": "Kanaltilpassning" }
+        { "name": "Designbrief", "button": briefButton },
+        { "name": "Personas", "button": personasButton },
+        { "name": "Kanaltilpassning", "button": chanelButton }
     ];
     aside(designTopics)
 }
 
 function kommunikasjonAside() {
     const kommunikasjonTopics = [
-        { "name": "Kommunikasjonsmodell" },
+        { "name": "Kommunikasjonsmodell", "button":  communicationButton},
         { "name": "Gestaltprinsipper" },
         { "name": "Etos, patos, logos" }
     ];

@@ -44,6 +44,12 @@ function kommunikasjonButton() {
     kommunikasjonAside();
     buttonBackgroundChange("Kommunikasjon")
     defaultMainChange("Kommunikasjon")
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = designButton;
+    next.onclick = communicationButton;
 }
 
 function fargeButton() {
@@ -86,8 +92,53 @@ function prosesserButton() {
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
     prev.className = "";
+    next.className = "";
     prev.onclick = designButton;
-    next.onclick = prosesserButton;
+    next.onclick = briefButton;
     drawProsesser();
     asideButtonBackgroundChange("Prosess");
+}
+
+function briefButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = prosesserButton;
+    next.onclick = personasButton;
+    drawBrief();
+    asideButtonBackgroundChange("Designbrief");
+}
+
+function personasButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = briefButton;
+    next.onclick = chanelButton;
+    drawPersonas();
+    asideButtonBackgroundChange("Personas");
+}
+
+function chanelButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = personasButton;
+    next.onclick = kommunikasjonButton;
+    drawChanel();
+    asideButtonBackgroundChange("Kanaltilpassning");
+}
+
+function communicationButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = kommunikasjonButton;
+    next.onclick = communicationButton;
+    drawCommunication();
+    asideButtonBackgroundChange("Kommunikasjonsmodell");
 }
