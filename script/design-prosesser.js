@@ -9,14 +9,14 @@ function drawProsesser() {
     article.innerHTML = `
     <h1>Design-prosess og metode</h1>
     <h2>Designer - klient </h2>
-    <img src="../img/design/designer-klient.svg" alt="Designer med blyant ved siden av klient med viskelære.">
+    <img src="./img/design/designer-klient.svg" alt="Designer med blyant ved siden av klient med viskelære.">
     <p>Klienten er personen eller organisasjonen som bestiller design-arbeidet. De
     starter med å skrive en design-brief som forklarer hva som skal produseres. Underveis er jobben
     til en klient å fortelle designer hvilke ideer som fungerer og hvilke ideer som ikke fungerer.</p>
     <h2>Vanlig design-prosess</h2>
     <p>Når man har fått ett oppdrag er det noen ting vi må gjøre. Bilde under viser stegene som er normale
     i et design-prosjekt. Hvis vi følger disse stegene, blir det enklere å inkludere andre i arbeidet vårt, blant annet klienten, men også andre designere.
-    <img src="../img/design/designprosessen.svg" alt="De syv stegene i design-prosessen vist i en sirkel.">
+    <img src="./img/design/designprosessen.svg" alt="De syv stegene i design-prosessen vist i en sirkel.">
     <h3>0. Designbrief</h3>
     <p> En designbrief er en beskrivelse av hva som er ønsket, og hva som kreves av designer med tanke på kompetanse.
     En designbrief er skrevet av klienten.<p>

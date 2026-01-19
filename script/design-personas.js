@@ -11,6 +11,6 @@ function drawPersonas() {
     som beskriver viktige element for en designer å tenke
     på i design-prosessen. Under er et eksempel på en personas
     for "Lærer".</p>
-     <img src="../img/design/personas.svg" alt="Lærer-personas bilde.">
+     <img src="./img/design/personas.svg" alt="Lærer-personas bilde.">
     `
 }
