@@ -1,0 +1,80 @@
+/**
+ * @typedef {Object} BriefItem
+ * @property {string} type
+ * @property {string} tag
+ * @property {string} content
+ */
+
+/**
+ * @typedef {Object} DesignData
+ * @property {Object.<string, BriefItem>} brief
+ */
+
+async function drawBrief() {
+    const main = document.querySelector("main");
+    if (!main) return;
+    main.id = "";
+    main.innerHTML = "";
+    const article = document.createElement("article");
+    main.append(article);
+    article.id = "main-text-content";
+    const data = await fetchJsonData();
+    if (!data) return;
+
+    const brief = data.brief;
+
+    Object.values(brief).forEach(item => {
+        if (item.type === "text"){
+            const tag = document.createElement(item.tag);
+            tag.innerText = item.content;
+            article.appendChild(tag);
+        }
+    });
+    //article.innerHTML = `
+    //<h1> Designbrief </h1>
+    //<h2> Innledning </h2>
+    //<p>Skolen ønsker en kampanje som forbedrer 
+    //elevenes mappe- og filstruktur ved bruk av plakater.</p>
+    //<h2>Bakgrunn</h2>
+    //<p>Ustrukturert lagring og manglende kontroll på filer
+    //skaper tap av tid og tap av arbeid for elevene på skolen.</p>
+    //<h2>Ønsket resultat</h2>
+    //<p>Ryddig filstruktur.</p>
+    //<h2>Strategi</h2>
+    //<p>Resultatet av dette arbeidet skal støtte arbeidsvaner
+    //som gir effektivitet, kvalitet og relevans i de fagene
+    //og på linjene skolen har.</p>
+    //<h2>Krav til designers kompetanse</h2>
+    //<p>Designer må forstå mappestruktur og kunne forenkle
+    //informasjon, bruke tydelig visuelt hierarki, sikre tilgjengelighet
+    //og levere kanaltilpassede filer til klient.</p>
+    //<h2>Evaluering</h2>
+    //<p>Levere arbeid med tydelig visuelt hierarki, god lesbarhet
+    //og kanaltilpassede filer. Designer klarer å kommunisere arbeid
+    //underveis på en god måte.</p>
+    //<h2>Fremdriftsplan</h2>
+    //<p>1. Gjøre seg kjent med relevant programvare.</p>
+    //<p>2. Følge designprosessen, med minst én revisjonsrunde.</p>
+    //<p>3. Endlig leveranse, av kanaltilpassede filtyper.</p>
+    //`
+}
+async function fetchJsonData() {
+    try {
+        // Use the correct absolute or relative URL to your JSON file
+        const response = await fetch('./json-data/design.json');
+
+        // Check if the request was successful
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Parse the JSON data
+        const data = await response.json();
+
+        // Work with your data here (e.g., display it on the page)
+        return data;
+
+    } catch (error) {
+        console.error('Could not fetch the data:', error);
+    }
+}
