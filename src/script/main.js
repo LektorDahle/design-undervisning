@@ -1,3 +1,15 @@
+import { Header, Footer } from "./header.js";
+import { GetContent } from "./get-json.js";
+
+export const contentData = new GetContent("./json-data/content.json")
+
+async function renderStatic() {
+    const links = await contentData.mainSubjects();
+    new Header(document.body, links);
+    new Footer(document.body);
+}
+renderStatic();
+
 /**@param {String} skjerm */
 export function visSkjerm(skjerm) {
     switch (skjerm) {

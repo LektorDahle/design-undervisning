@@ -53,28 +53,23 @@ describe("Sets cookie for current screen", () => {
 describe("App initialization and navigation events", () => {
     beforeEach(() => {
         localStorage.clear();
-        // Vi nullstiller history-staten for hver test
         window.history.replaceState({}, "", "");
     });
 
     test('DOMContentLoaded should start on "Hovedside" if localstorage "skjerm" is missing', () => {
-        // ACT: Vi trigger hendelsen
         document.dispatchEvent(new Event('DOMContentLoaded'));
 
-        // ASSERT: Vi sjekker resultatet i localStorage i stedet for en spy
-        // Dette beviser at visSkjerm("Hovedside") ble kjørt
         expect(localStorage.getItem("skjerm")).toBe("Hovedside");
     });
 
     test('popstate should update localstorage and display correct screen', () => {
-        // ARRANGE: Lag et event med en spesifikk state
+        /**@type {String} nySkjerm */
         const nySkjerm = 'Designbrief';
+
         const event = new PopStateEvent('popstate', { state: { skjerm: nySkjerm } });
 
-        // ACT: Trigger hendelsen
         window.dispatchEvent(event);
 
-        // ASSERT: Sjekk om logikken din faktisk oppdaterte lageret
         expect(localStorage.getItem("skjerm")).toBe(nySkjerm);
     });
 });

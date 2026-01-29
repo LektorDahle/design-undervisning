@@ -1,0 +1,21 @@
+digraph G {
+    json [ label = "Innhold", shape= "cylinder" ];
+    localStorage [ label = "LocalStorage", shape = "folder" ];
+
+    subgraph main{
+        cluster=true;
+        label = "main.js";
+        style=dotted;
+        visSkjerm [ label = "Vis skjerm" ];
+        navigerTilSkjerm [ label = "navigerTilSkjerm" ];
+        DOMContentLoaded [ label = "DOMContentLoaded", shape = "rectangle" ];
+        popstate [ label = "EventListener popstate", shape = "rectangle" ]
+       }
+    popstate -> visSkjerm;
+    DOMContentLoaded -> visSkjerm;
+    popstate -> localStorage;
+    DOMContentLoaded -> localStorage;
+    navigerTilSkjerm -> localStorage;
+    visSkjerm -> navigerTilSkjerm;
+
+}
