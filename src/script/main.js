@@ -4,6 +4,9 @@ export function visSkjerm(skjerm) {
         case "Hovedside":
             navigerTilSkjerm(skjerm)
             return "Hovedside";
+        case "Design":
+            navigerTilSkjerm(skjerm)
+            return "Design";
         case "Prosess":
             navigerTilSkjerm(skjerm)
             return "Prosess";

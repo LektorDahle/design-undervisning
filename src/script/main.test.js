@@ -1,5 +1,6 @@
 /** @jest-environment jsdom */
 import { jest } from '@jest/globals';
+/** @type {import("./main.js")} */
 import * as MainModule from "./main.js";
 
 
@@ -33,7 +34,9 @@ describe("Sets cookie for current screen", () => {
         jest.clearAllMocks();
     });
     test('updates localStorage with new screen info', () => {
+        /** @type {jest.SpiedFunction<typeof window.history.pushState>} */
         const pushStateSpy = jest.spyOn(window.history, 'pushState');
+        /**@type {string} nySkjerm*/
         const nySkjerm = "Prosess";
 
         MainModule.navigerTilSkjerm(nySkjerm);
