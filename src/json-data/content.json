@@ -1,0 +1,200 @@
+{
+    "Design": {
+        "Prosess": {
+            "title": {
+                "type": "text",
+                "tag": "h1",
+                "content": "Design-prosess og metode"
+            },
+            "subtitle1": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Designer - klient"
+            },
+            "image1": {
+                "type": "image",
+                "tag": "img",
+                "src": "./img/design/designer-klient.svg",
+                "alt": "Designer med blyant ved siden av klient med viskelære."
+            },
+            "paragraph1": {
+                "type": "text",
+                "tag": "p",
+                "content": "Klienten er personen eller organisasjonen som bestiller design-arbeidet. De starter med å skrive en design-brief som forklarer hva som skal produseres. Underveis er jobben til en klient å fortelle designer hvilke ideer som fungerer og hvilke ideer som ikke fungerer."
+            },
+            "subtitle2": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Vanlig design-prosess"
+            },
+            "paragraph2": {
+                "type": "text",
+                "tag": "p",
+                "content": "Når man har fått ett oppdrag er det noen ting vi må gjøre. Bilde under viser stegene som er normale i et design-prosjekt. Hvis vi følger disse stegene, blir det enklere å inkludere andre i arbeidet vårt, blant annet klienten, men også andre designere."
+            },
+            "image2": {
+                "type": "image",
+                "tag": "img",
+                "src": "./img/design/designprosessen.svg",
+                "alt": "De syv stegene i design-prosessen vist i en sirkel."
+            },
+            "subsubtitle1": {
+                "type": "text",
+                "tag": "h2",
+                "content": "0. Designbrief"
+            },
+            "paragraph3": {
+                "type": "text",
+                "tag": "p",
+                "content": "En designbrief er en beskrivelse av hva som er ønsket, og hva som kreves av designer med tanke på kompetanse. En designbrief er skrevet av klienten."
+            },
+            "subsubtitle2": {
+                "type": "text",
+                "tag": "h2",
+                "content": "1. Problemformulering"
+            },
+            "paragraph4": {
+                "type": "text",
+                "tag": "p",
+                "content": "En problemformulering er laget i sammarbeid med klient og designer. Dette kan være et skrevet dokument, en samtale over epost eller en muntlig avtale. I små prosjekt med en designer er det ikke altid nødvendig å skrive så mye ned i dette steget."
+            },
+            "subsubtitle3": {
+                "type": "text",
+                "tag": "h2",
+                "content": "2. Analyse"
+            },
+            "paragraph5": {
+                "type": "text",
+                "tag": "p",
+                "content": "I dette steget prøves det ut flere design. I dette steget skisserer designer det meste med enkle verktøy og få detaljer."
+            },
+            "subsubtitle4": {
+                "type": "text",
+                "tag": "h2",
+                "content": "3. Beslutning"
+            },
+            "paragraph6": {
+                "type": "text",
+                "tag": "p",
+                "content": "I dette steget velges en av skissene. Dette kan gjøres sammen med klient, med en annen kollega eller alene. Det er viktig at man har en god nok ide for hvordan design-forslaget skal bli."
+            },
+            "subsubtitle5": {
+                "type": "text",
+                "tag": "h2",
+                "content": "4. Gjennomføring"
+            },
+            "paragraph7": {
+                "type": "text",
+                "tag": "p",
+                "content": "Nå lages designet. Prosessen er tegnet som en sirkel fordi disse stegene kan gjentas flere ganger. De første gangene man er i dette steget legger man ikke like mye vekt på å få alt rett. Mot slutten av et prosjekt er dette det viktigste steget, da må alle detaljene være på plass."
+            },
+            "subsubtitle6": {
+                "type": "text",
+                "tag": "h2",
+                "content": "5. Kontroll "
+            },
+            "paragraph8": {
+                "type": "text",
+                "tag": "p",
+                "content": "Klient godkjenner designet eller kommer med tilbakemelding. Det er godt mulig at klienten ønsker at du starter helt på nytt. Dette er vanlig."
+            },
+            "subsubtitle7": {
+                "type": "text",
+                "tag": "h2",
+                "content": "6. Kanaltilpasning og publisering "
+            },
+            "paragraph9": {
+                "type": "text",
+                "tag": "p",
+                "content": "Dersom klienten er fornøyd, gjøres de siste tilpasningene og så publiseres designet. Dersom noe skal animeres, er det normalt at det fullføres i dette steget. Video er det \"dyreste\" formatet med tanke på arbeidstid."
+            }
+        },
+        "Designbrief": {
+            "title": {
+                "type": "text",
+                "tag": "h1",
+                "content": "Designbrief"
+            },
+            "subtitle1": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Innledning"
+            },
+            "paragraph1": {
+                "type": "text",
+                "tag": "p",
+                "content": "Skolen ønsker en kampanje som forbedrer elevenes mappe- og filstruktur ved bruk av plakater."
+            },
+            "subtitle2": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Bakgrunn"
+            },
+            "paragraph2": {
+                "type": "text",
+                "tag": "p",
+                "content": "Ustrukturert lagring og manglende kontroll på filer skaper tap av tid og tap av arbeid for elevene på skolen."
+            },
+            "subtitle3": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Ønsket resultat"
+            },
+            "paragraph3": {
+                "type": "text",
+                "tag": "p",
+                "content": "Ryddig filstruktur."
+            },
+            "subtitle4": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Strategi"
+            },
+            "paragraph4": {
+                "type": "text",
+                "tag": "p",
+                "content": "Resultatet av dette arbeidet skal støtte arbeidsvaner som gir effektivitet, kvalitet og relevans i de fagene og på linjene skolen har."
+            },
+            "subtitle5": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Krav til designers kompetanse"
+            },
+            "paragraph5": {
+                "type": "text",
+                "tag": "p",
+                "content": "Designer må forstå mappestruktur og kunne forenkle informasjon, bruke tydelig visuelt hierarki, sikre tilgjengelighe og levere kanaltilpassede filer til klient."
+            },
+            "subtitle6": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Evaluering"
+            },
+            "paragraph6": {
+                "type": "text",
+                "tag": "p",
+                "content": "Levere arbeid med tydelig visuelt hierarki, god lesbarhet og kanaltilpassede filer. Designer klarer å kommunisere arbeid underveis på en god måte."
+            },
+            "subtitle7": {
+                "type": "text",
+                "tag": "h2",
+                "content": "Fremdriftsplan"
+            },
+            "paragraph7": {
+                "type": "text",
+                "tag": "p",
+                "content": "1. Gjøre seg kjent med relevant programvare."
+            },
+            "paragraph8": {
+                "type": "text",
+                "tag": "p",
+                "content": "2. Følge designprosessen, med minst én revisjonsrunde."
+            },
+            "paragraph9": {
+                "type": "text",
+                "tag": "p",
+                "content": "3. Endlig leveranse, av kanaltilpassede filtyper."
+            }
+        }
+    }
+}

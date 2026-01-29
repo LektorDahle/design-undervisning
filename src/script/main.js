@@ -1,19 +1,30 @@
-/**@param {String} skjerm*/
-function visSkjerm(skjerm) {
+/**@param {String} skjerm */
+export function visSkjerm(skjerm) {
     switch (skjerm) {
-        case "login":
-            new LoginScreen().render();
-            break;
-        case "ny-bruker":
-            new NewUserScreen().render();
-            break;
-        case "hovedside":
-            new MainPage().render();
-            break;
+        case "Hovedside":
+            navigerTilSkjerm(skjerm)
+            return "Hovedside";
+        case "Prosess":
+            navigerTilSkjerm(skjerm)
+            return "Prosess";
+        case "Designbrief":
+            navigerTilSkjerm(skjerm)
+            return "Designbrief";
         default:
-            new LoginScreen().render();
+            navigerTilSkjerm("Hovedside")
+            return "Hovedside";
     }
 }
+
+/**@param {String} skjerm */
+export function navigerTilSkjerm(skjerm) {
+    const forrige = localStorage.getItem("skjerm");
+    if (forrige !== skjerm) {
+        window.history.pushState({ skjerm }, "", "");
+        localStorage.setItem("skjerm", skjerm);
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const skjerm = localStorage.getItem("skjerm");
@@ -22,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
         window.history.replaceState({ skjerm }, "", "");
         visSkjerm(skjerm);
     } else {
-        visSkjerm("hovedside");
+        visSkjerm("Hovedside");
     }
 });
 
 window.addEventListener("popstate", (e) => {
-    const skjerm = e.state?.skjerm || "login";
+    const skjerm = e.state?.skjerm || "Hovedside";
     localStorage.setItem("skjerm", skjerm);
     visSkjerm(skjerm);
 });

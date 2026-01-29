@@ -32,5 +32,5 @@
     link3.href = "https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap";
     link3.rel = "stylesheet";
     
-    head.appendChild(link1, link2, link3)
+    head.append(link1, link2, link3)
 })()
