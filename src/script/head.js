@@ -1,23 +1,42 @@
+export class HeadInfo {
+    constructor() {
+        this.head = document.head;
+        if (!this.head) return;
+        if (!this.head.querySelector('meta[name="viewport"]')) {
+            const meta_viewport = document.createElement("meta");
+            meta_viewport.name = "viewport";
+            meta_viewport.content = "width=device-width, initial-scale=1.0";
+            this.head.appendChild(meta_viewport);
+        }
+        if (!this.head.querySelector('meta[charset]')) {
+            const meta_utf = document.createElement("meta");
+            meta_utf.setAttribute("charset", "UTF-8");
+            this.head.appendChild(meta_utf);
+        }
+        this.addLink("./base.css", "stylesheet", "");
+        this.addLink("https://fonts.googleapis.com", "preconnect", "");
+        this.addLink("https://fonts.gstatic.com", "preconnect", "anonymous");
+        
+    }
+    /**@param {string} link */
+    addCSS(link) {
+        this.link = link;
+        this.base_css = document.createElement("link");
+        this.base_css.rel = "stylesheet";
+        this.base_css.href = link;
+        this.head.appendChild(this.base_css);
+    }
+    /**@param {string} link */
+    addLink(link, rel, crossorigin){
+        this.link = document.createElement("link");
+        this.link.rel = rel;
+        this.link.href = link;
+        this.link.crossOrigin = crossorigin;
+        this.head.appendChild(this.link);
+    }
+}
 
 (() => {
-    const head = document.head;
-    if (!head) { return }
-    if (!head.querySelector('meta[charset]')) {
-        const meta_utf = document.createElement("meta");
-        meta_utf.setAttribute("charset", "UTF-8");
-        head.prepend(meta_utf);
-    }
-
-    if (!head.querySelector('meta[name="viewport"]')) {
-        const meta_viewport = document.createElement("meta");
-        meta_viewport.name = "viewport";
-        meta_viewport.content = "width=device-width, initial-scale=1.0";
-        head.prepend(meta_viewport);
-    }
-    const base_css = document.createElement("link");
-    base_css.rel = "stylesheet";
-    base_css.href = "./base.css";
-    head.append(base_css);
 
     const link1 = document.createElement("link");
     link1.rel = "preconnect";
@@ -31,6 +50,4 @@
     const link3 = document.createElement("link");
     link3.href = "https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap";
     link3.rel = "stylesheet";
-    
-    head.append(link1, link2, link3)
 })()

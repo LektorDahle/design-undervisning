@@ -5,7 +5,7 @@ import * as MainModule from "./main.js";
 
 
 
-describe("Decides which sceen to display", () => {
+describe("Decides which sceen to display: ", () => {
     beforeEach(() => {
         localStorage.clear();
     });
@@ -18,7 +18,6 @@ describe("Decides which sceen to display", () => {
     test('should return "Hovedside" as default', () => {
         // @ts-ignore - tester ugyldig input for å sjekke default-case
         const resultat = MainModule.visSkjerm("SomethingWrong");
-
         expect(resultat).toBe("Hovedside");
     });
 

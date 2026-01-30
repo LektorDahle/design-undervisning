@@ -14,12 +14,15 @@ export class GetContent {
     constructor(path) {
         this.path = path;
 
-        /** @type {Promise<DataSchema | undefined>} */
+        /** @type {Promise<Object | undefined>} */
         this.data = this.fetchJsonData();
 
     }
 
-    /** @returns {Promise<DataSchema | undefined>} */
+    /** 
+      * Fetching the json content-data as a promise
+      * @returns {Promise<Object | undefined>} 
+      */
     async fetchJsonData() {
         try {
             /** @type {Response} */
@@ -29,8 +32,9 @@ export class GetContent {
                 throw new Error(`HTTP error: status = ${response.status}`);
             }
 
-            /** * @type {Object<string, Object<string, Object<string, ElementInfo>>>} 
-             */
+            /** 
+              * @type {Object<string, Object<string, Object<string, ElementInfo>>>} 
+              */
             const data = await response.json();
             return data;
         } catch (error) {
@@ -38,11 +42,14 @@ export class GetContent {
         }
     }
 
-    async mainSubjects(){
+    /**
+    * Returns the main subjects of the content data as a promise
+    * @returns {Promise<Object>} 
+    */
+    async mainSubjects() {
+        /**@type {Object | Undefined} */
         const data = await this.data;
-
         if (!data) return [];
-
         return Object.keys(data);
     }
 }

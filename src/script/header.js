@@ -5,6 +5,7 @@ export class Header {
     */
     constructor(body, links) {
         this.links = links;
+        /**@type {HTMLElement} this.body */
         this.body = body;
         this.header = /** @type {HTMLElement} */ (
             document.querySelector("header") ||
@@ -12,6 +13,7 @@ export class Header {
         );
         this.header.innerHTML = "";
 
+        /**@type {HTMLElement} this.nav */
         this.nav = document.createElement("nav");
         this.header.appendChild(this.nav);
         this.nav.id = "header-nav";
@@ -19,17 +21,18 @@ export class Header {
             /**@type {HTMLButtonElement} */
             const mainContentButton = document.createElement("button");
             mainContentButton.innerText = String(i);
-            this.nav.appendChild(mainContentButton)
+            mainContentButton.id = "inactive-link";
+            this.nav.appendChild(mainContentButton);
         }
+    }
+    changeActive(){
+        
     }
 }
 
 
 //(() => {
-//    const body = /** @type {HTMLElement} */ document.body;
-//    if (!body) { return }
-//    const header = /** @type {HTMLElement} */ document.createElement("header");
-//    body.prepend(header);
+
 //    const hamburgerWrapper = /** @type {HTMLElement} */ document.createElement("button");
 //    hamburgerWrapper.className = "hamburger-wrapper";
 //    hamburgerWrapper.onclick = () => {
@@ -44,10 +47,6 @@ export class Header {
 //    img.src = "./img/ico/hamburger.svg";
 //    hamburgerWrapper.append(img);
 //    body.append(hamburgerWrapper);
-
-//    /** * @typedef {Object} HeaderLink
-//    * @property {string} name
-//    ** @property {(ev: MouseEvent) => any} button
 //    */
 
 //})();
