@@ -44,12 +44,26 @@ export class GetContent {
 
     /**
     * Returns the main subjects of the content data as a promise
-    * @returns {Promise<Object>} 
+    * @returns {Promise<string[]>}
     */
     async mainSubjects() {
         /**@type {Object | Undefined} */
         const data = await this.data;
         if (!data) return [];
         return Object.keys(data);
+    }
+
+    /**
+    * Returns the sub-subjects of the content data as a promise
+    * @returns {Promise<string[]>}
+    * @param {string} subject
+    */
+    async getSubSubjects(subject){
+        const data = /** @type {DataSchema} */ (await this.data);
+        if (!data || !data[subject]) return [];
+
+        /** @type {Record<string, Record<string, ElementInfo>>} */
+        const subData = data[subject];
+        return Object.keys(subData);
     }
 }

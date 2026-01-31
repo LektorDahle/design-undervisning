@@ -1,3 +1,6 @@
+
+
+
 export class HeadInfo {
     constructor() {
         this.head = document.head;
