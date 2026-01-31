@@ -1,9 +1,12 @@
 import { Header, Footer } from "./header.js";
 import { GetContent } from "./get-json.js";
+import { HeadInfo } from "./head.js"
+
 
 export const contentData = new GetContent("./json-data/content.json")
 
 async function renderStatic() {
+    new HeadInfo();
     /**@type {Array<Object>} */
     const links = await contentData.mainSubjects();
 

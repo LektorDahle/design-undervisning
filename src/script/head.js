@@ -13,37 +13,29 @@ export class HeadInfo {
             meta_utf.setAttribute("charset", "UTF-8");
             this.head.appendChild(meta_utf);
         }
-        this.addLink("./base.css", "stylesheet", "");
-        this.addLink("https://fonts.googleapis.com", "preconnect", "");
-        this.addLink("https://fonts.gstatic.com", "preconnect", "anonymous");
-        
+        this.addLink({link: "./base.css", rel: "stylesheet"});
+        this.addLink({ link: "https://fonts.googleapis.com", rel: "preconnect"});
+        this.addLink({ link: "https://fonts.gstatic.com", rel: "preconnect", crossorigin: "anonymous"});
+        this.addLink({ link: "https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap", rel: "stylesheet"});
     }
+
     /**
-      *@param {string} link 
-      *@param {string} rel
-      *@param {string} crossorigin
-      */
-    addLink(link, rel, crossorigin){
+     * @param {Object} options
+     * @param {string} [options.link]
+     * @param {string} [options.rel]
+     * @param {string} [options.crossorigin]
+     */
+    addLink({ link, rel, crossorigin } = {}) {
         this.link = document.createElement("link");
-        this.link.rel = rel;
-        this.link.href = link;
-        this.link.crossOrigin = crossorigin;
+        if (rel) {
+            this.link.rel = rel;
+        }
+        if (link) {
+            this.link.href = link;
+        }
+        if (crossorigin) {
+            this.link.crossOrigin = crossorigin;
+        }
         this.head.appendChild(this.link);
     }
 }
-
-(() => {
-
-    const link1 = document.createElement("link");
-    link1.rel = "preconnect";
-    link1.href = "https://fonts.googleapis.com";
-
-    const link2 = document.createElement("link");
-    link2.rel = "preconnect";
-    link2.href = "https://fonts.gstatic.com"
-    link2.crossOrigin = "anonymous";
-
-    const link3 = document.createElement("link");
-    link3.href = "https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap";
-    link3.rel = "stylesheet";
-})()
