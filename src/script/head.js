@@ -18,15 +18,11 @@ export class HeadInfo {
         this.addLink("https://fonts.gstatic.com", "preconnect", "anonymous");
         
     }
-    /**@param {string} link */
-    addCSS(link) {
-        this.link = link;
-        this.base_css = document.createElement("link");
-        this.base_css.rel = "stylesheet";
-        this.base_css.href = link;
-        this.head.appendChild(this.base_css);
-    }
-    /**@param {string} link */
+    /**
+      *@param {string} link 
+      *@param {string} rel
+      *@param {string} crossorigin
+      */
     addLink(link, rel, crossorigin){
         this.link = document.createElement("link");
         this.link.rel = rel;
