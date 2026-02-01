@@ -1,10 +1,12 @@
+import { Content } from "./subjects.js";
+
 export class Header {
     /**
       * @param {HTMLElement} body
-      * @param {Array<Object>} links 
+      * @param {string} link
     */
-    constructor(body, links) {
-        this.links = links;
+    constructor(body, link) {
+        this.links = link;
         /**@type {HTMLElement} this.body */
         this.body = body;
         this.header = /** @type {HTMLElement} */ (
@@ -17,16 +19,12 @@ export class Header {
         this.nav = document.createElement("nav");
         this.header.appendChild(this.nav);
         this.nav.id = "header-nav";
-        for (const i of links) {
-            /**@type {HTMLButtonElement} */
-            const mainContentButton = document.createElement("button");
-            mainContentButton.innerText = String(i);
-            mainContentButton.id = "inactive-link";
-            this.nav.appendChild(mainContentButton);
-        }
+        const content = new Content(this.nav, link);
+        content.makeHeaderLinks();
+
     }
-    changeActive(){
-        
+    changeActive() {
+
     }
 }
 
@@ -63,4 +61,16 @@ export class Footer {
         logo.src = "./img/ico/LD-logo.svg";
         footer.append(logo);
     }
+}
+
+export class Aside{
+    /**
+    * @param {HTMLElement} body
+     */
+     constructor(body){
+        this.body = body;
+        this.aside = document.createElement("aside");
+        this.body.appendChild(this.aside);
+        this.aside.style.display = "flex";
+     }
 }

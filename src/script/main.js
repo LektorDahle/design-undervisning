@@ -1,18 +1,19 @@
-import { Header, Footer } from "./header.js";
-import { GetContent } from "./get-json.js";
+import { Header, Footer, Aside } from "./divs.js";
+//import { GetContent } from "./get-json.js";
 import { HeadInfo } from "./head.js";
 
 
-export const contentData = new GetContent("./json-data/content.json")
+//export const contentData = new GetContent("./json-data/content.json")
 
 async function renderStatic() {
     new HeadInfo();
     /** @type {string[]}  */
-    const links = await contentData.mainSubjects();
-    const links2 = await contentData.getSubSubjects("Design");
-    console.log(links2)
-    new Header(document.body, links);
+    //const links = await contentData.mainSubjects();
+    //const links2 = await contentData.getSubSubjects("Design");
+    new Header(document.body, "./json-data/content.json");
     new Footer(document.body);
+    new Aside(document.body);
+
 }
 renderStatic();
 

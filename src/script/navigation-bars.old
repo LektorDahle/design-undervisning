@@ -3,14 +3,21 @@
  */
 class Aside {
     /**
-      *@param{HTMLElement} body - Forelderelementet som aside plasseres i.
+      * @param {HTMLElement} body - Forelderelementet som aside plasseres i.
+      * @param {Array<Object>} links
       */
-    constructor(body) {
+    constructor(body, links) {
         this.body = body;
+        this.links = links;
         this.aside = /** @type {HTMLElement} */ (
             document.querySelector("aside") ||
             body.appendChild(document.createElement("aside"))
         );
         this.aside.innerHTML = "";
+
+        for (const i of links) {
+            console.log(i)
+        }
+
     }
 }
