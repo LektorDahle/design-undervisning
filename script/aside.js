@@ -19,7 +19,7 @@ function kommunikasjonAside() {
 
 function fargerAside() {
     const fargeTopics = [
-        { "name": "RGB, CMYK og CIE" },
+        { "name": "RGB, CMYK og CIE", "button": colourButton },
         { "name": "Kontraster" },
         { "name": "Fargevalg" },
         { "name": "Bruk av farger" }
