@@ -18,11 +18,11 @@ function drawChanel() {
     <p>Safety-området er der innhold som er viktig må være plassert. 
     Innhold som er plassert utenfor dette kan bli kuttet vekk i trim - prosessen der man 
     kutter vekk sidene av printen.</p>
-    <img src="./img/design/print-begrep-eksempel.png" alt="Eksempel på bruk av bleed og safety.">
+    <img src="./img/design/print-begrep-eksempel.avif" alt="Eksempel på bruk av bleed og safety.">
     <h2>Skjerm</h2>
     <img src="./img/design/skjerm-begrep.svg" alt="Oversikt over print-begrep.">
     <p>Det er normalt å benytte marginer for skjerm også, og ofte kan det være lurt
     å ha med en safety på en til to centimeter rundt skjermkanten.</p>
-     <img src="./img/design/skjermbegrep-eksempel.png" alt="Eksempel på bruk margin og safety.">
+     <img src="./img/design/skjermbegrep-eksempel.avif" alt="Eksempel på bruk margin og safety.">
     `
 }
