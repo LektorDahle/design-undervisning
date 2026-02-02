@@ -56,6 +56,12 @@ function fargeButton() {
     fargerAside();
     buttonBackgroundChange("Farger")
     defaultMainChange("Farger")
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = chanelButton;
+    next.onclick = colourButton;
 }
 
 function gridButton() {
@@ -127,7 +133,7 @@ function chanelButton() {
     prev.className = "";
     next.className = "";
     prev.onclick = personasButton;
-    next.onclick = kommunikasjonButton;
+    next.onclick = fargeButton;
     drawChanel();
     asideButtonBackgroundChange("Kanaltilpassning");
 }
@@ -138,7 +144,19 @@ function communicationButton() {
     prev.className = "";
     next.className = "";
     prev.onclick = kommunikasjonButton;
-    next.onclick = communicationButton;
+    next.onclick = colourButton;
     drawCommunication();
+    asideButtonBackgroundChange("Kommunikasjonsmodell");
+}
+
+
+function colourButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = personasButton;
+    next.onclick = colourButton;
+    drawSpaces()
     asideButtonBackgroundChange("Kommunikasjonsmodell");
 }
