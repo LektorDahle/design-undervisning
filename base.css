@@ -11,7 +11,7 @@ html {
 }
 
 :root {
-    font-size: clamp (14pt, 1.5vw, 18pt);
+    font-size: clamp(0.8em, 1.5vw, 1.2em);
     --font-family: "Radley", serif;
     --font-weight-p: 400;
     --font-weight-h: 700;
@@ -28,16 +28,17 @@ button {
 }
 
 h1 {
-    font-size: calc(1.41*1.41*1.41rem);
+    font-size: 3rem;
     margin-top: .5em;
 }
 
 h2 {
-    font-size: calc(1.41*1.41rem);
+    font-size: 2rem;
     margin-top: .5em;
 }
 
 h3 {
+    font-size: 1.41rem;
     margin-top: .5em;
 }
 
@@ -47,6 +48,7 @@ button {
 }
 
 p {
+    font-size: 1rem;
     font-family: var(--font-family);
     font-weight: var(--font-weight-p);
     font-style: var(--font-style);
@@ -241,6 +243,7 @@ aside>nav>button {
     top: 50%;
     width: 2em;
     height: 15em;
+    z-index: 10;
 }
 
 #next {
@@ -250,6 +253,7 @@ aside>nav>button {
     top: 50%;
     width: 2em;
     height: 15em;
+    z-index: 10;
 }
 
 .deactive-button {

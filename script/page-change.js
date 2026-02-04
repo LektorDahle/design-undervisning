@@ -74,6 +74,12 @@ function typeButton() {
     typeAside();
     buttonBackgroundChange("Typografi")
     defaultMainChange("Typografi")
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = prosesserButton;
+    next.onclick = kommunikasjonButton;
 }
 
 function fileButton() {
@@ -156,7 +162,19 @@ function colourButton() {
     prev.className = "";
     next.className = "";
     prev.onclick = personasButton;
-    next.onclick = colourButton;
+    next.onclick = typeButton;
     drawSpaces()
-    asideButtonBackgroundChange("Kommunikasjonsmodell");
+    asideButtonBackgroundChange("RGB, CMYK og CIE");
 }
+
+function skrifterButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = typeButton;
+    next.onclick = skrifterButton;
+    skriftTyper()
+    asideButtonBackgroundChange("Typer skrift");
+}
+

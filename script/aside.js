@@ -39,7 +39,7 @@ function gridAside() {
 
 function typeAside() {
     const typeTopics = [
-        { "name": "Typer skrift" },
+        { "name": "Typer skrift", "button": skrifterButton },
         { "name": "Typografisk skala" },
         { "name": "Typografisk skille" },
         { "name": "Begrep" }
