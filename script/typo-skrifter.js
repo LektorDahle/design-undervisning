@@ -19,11 +19,19 @@ function skriftTyper() {
     <h3>Sans serif</h3>
     <p>Skrift uten seriffer. Sans serif er vanlig i digitale flater, presentasjoner og moderne design, og oppleves ofte som ren og tydelig.</p>
 
+    <img src="./img/typo/serif-sans-serif.svg" alt="Forksjellen mellom serif og sans">
+
+    <p>Ofte sier vi bare sans når vi mener sans serif. Bilde over viser sans skrift og en serif skrift under med noen av serifene sirklet rundt.i</p>
+
     <h3>Geometrisk</h3>
     <p>Skrift med former som virker “konstruert” med enkel geometri (runde former, jevne kurver, lik vekt). Brukes ofte i overskrifter og grafisk profil, men kan være mindre behagelig i lange tekster dersom den blir for stram.</p>
 
+    <img src="./img/typo/geometrisk.svg" alt="Geometrisk skrift">
+
     <h3>Monospace</h3>
     <p>Skrift der alle tegn har samme bredde. Den brukes særlig til kode og tabeller fordi den gjør det enkelt å stille opp kolonner, men er vanligvis ikke førstevalg i løpende tekst.</p>
+
+    <img src="./img/typo/monospace.svg" alt="Monospaced skrift">
 
     <h3>Script</h3>
     <p>Skrift som etterligner håndskrift. Den brukes mest i korte mengder (for eksempel en tittel, en signatur eller et dekorativt element), fordi lesbarheten ofte faller når teksten blir lang.</p>
