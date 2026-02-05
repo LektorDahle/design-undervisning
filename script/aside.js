@@ -10,7 +10,7 @@ function designAside() {
 
 function kommunikasjonAside() {
     const kommunikasjonTopics = [
-        { "name": "Kommunikasjonsmodell", "button":  communicationButton},
+        { "name": "Kommunikasjonsmodell", "button": communicationButton },
         { "name": "Gestaltprinsipper" },
         { "name": "Etos, patos, logos" }
     ];
@@ -40,7 +40,7 @@ function gridAside() {
 function typeAside() {
     const typeTopics = [
         { "name": "Typer skrift", "button": skrifterButton },
-        { "name": "Typografisk skala" },
+        { "name": "Typografisk skala", "button": skriftScale },
         { "name": "Typografisk skille" },
         { "name": "Begrep" }
     ];

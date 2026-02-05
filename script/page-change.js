@@ -178,3 +178,13 @@ function skrifterButton() {
     asideButtonBackgroundChange("Typer skrift");
 }
 
+function scaleButton() {
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+    prev.className = "";
+    next.className = "";
+    prev.onclick = skrifterButton;
+    next.onclick = scaleButton;
+    skriftTyper()
+    asideButtonBackgroundChange("Typografisk skala");
+}
